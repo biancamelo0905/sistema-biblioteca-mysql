@@ -11,11 +11,13 @@ Todos os dados são inventados.
 - `sql/01_schema.sql`: cria o banco e as 8 tabelas.
 - `sql/02_seed.sql`: insere dados de exemplo para testar.
 - `sql/03_queries.sql`: consultas úteis e uma view de empréstimos em aberto.
+-  `sql/04_usuarios_permissoes.sql`: três perfis de acesso (administrador, atendente e leitura), cada um com permissões diferentes.
 
 ## O que ainda falta
 
 - Usuários com permissões diferentes (administrador, só leitura).
 - Script de backup e restauração.
+-  Script de backup e restauração.
 
 ## Como rodar
 
@@ -24,6 +26,7 @@ Precisa do MySQL 8.0 ou superior.
 ```bash
 mysql -u root -p < sql/01_schema.sql
 mysql -u root -p < sql/02_seed.sql
+mysql -u root -p < sql/04_usuarios_permissoes.sql
 ```
 
 ## Como o banco está organizado
