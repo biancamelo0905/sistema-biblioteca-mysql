@@ -2,7 +2,7 @@
 
 Projeto de banco de dados que estou montando para praticar o que aprendi nos cursos de Administração de Banco de Dados e Introdução à Cibersegurança.
 
-A ideia é simular o banco de uma biblioteca, com livros, autores, membros e empréstimos. Depois quero adicionar controle de acesso por tipo de usuário e backup automático.
+A ideia é simular o banco de uma biblioteca, com livros, autores, membros e empréstimos, e controlar o acesso por tipo de usuário. Depois quero adicionar backup automático.
 
 Todos os dados são inventados.
 
@@ -11,13 +11,11 @@ Todos os dados são inventados.
 - `sql/01_schema.sql`: cria o banco e as 8 tabelas.
 - `sql/02_seed.sql`: insere dados de exemplo para testar.
 - `sql/03_queries.sql`: consultas úteis e uma view de empréstimos em aberto.
--  `sql/04_usuarios_permissoes.sql`: três perfis de acesso (administrador, atendente e leitura), cada um com permissões diferentes.
+- `sql/04_usuarios_permissoes.sql`: três perfis de acesso (administrador, atendente e leitura), cada um com permissões diferentes.
 
 ## O que ainda falta
 
-- Usuários com permissões diferentes (administrador, só leitura).
 - Script de backup e restauração.
--  Script de backup e restauração.
 
 ## Como rodar
 
@@ -26,8 +24,11 @@ Precisa do MySQL 8.0 ou superior.
 ```bash
 mysql -u root -p < sql/01_schema.sql
 mysql -u root -p < sql/02_seed.sql
+mysql -u root -p < sql/03_queries.sql
 mysql -u root -p < sql/04_usuarios_permissoes.sql
 ```
+
+As senhas do `04_usuarios_permissoes.sql` são só modelos para estudo. Troque por outras antes de usar em qualquer lugar de verdade.
 
 ## Como o banco está organizado
 
